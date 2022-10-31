@@ -1,0 +1,40 @@
+/* Work */
+.work-list__title {
+    color: var(--primary-text-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.work-list__text {
+    color: var(--title-text-collor);
+    font-size: 16px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.work-list__item {
+    background-color: var(--primary-white-color);
+    flex-basis: calc((100% - 90px) / 4);
+}
+
+.team {
+    gap: 30px;
+    display: flex;
+}
+
+.benefits {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-left: 1px solid var(--border-works-color);
+    border-right: 1px solid var(--border-works-color);
+    border-bottom: 1px solid var(--border-works-color);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.benefits__title {
+    margin-bottom: 10px;
+}
