@@ -2,11 +2,13 @@
 
 .image {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
 }
 
 .image__link {
     position: relative;
+    width: 100%;
 }
 
 .image__text {
