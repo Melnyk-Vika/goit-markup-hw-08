@@ -1,7 +1,14 @@
 /*--------direction of work------- */
 
+.direction {
+display: block;
+    @media screen and (max-width: 1199px) {
+            display: none;
+        }
+}
+
 .image {
-    display: none;
+    display: flex;
     flex-wrap: wrap;
     gap: 30px;
 }
@@ -9,20 +16,6 @@
 .image__link {
     position: relative;
     width: 100%;
-
-    @media screen and (min-width: 768px) {
-            flex-basis: calc((100% - 2 * 30px) / 2);
-        }
-    
-        @media screen and (min-width: 1140px) {
-            flex-basis: calc((100% - 3 * 30px) / 3);
-        }
-    
-        &:not(:last-child) {
-            @media screen and (max-width: 767px) {
-                margin-bottom: 30px;
-            }
-        }
 }
 
 .image__text {
@@ -42,8 +35,4 @@
     text-transform: uppercase;
     background-color: rgba(47, 48, 58, 0.8);
     color: var(--primary-white-color);
-    
-    @media screen and (min-width: 768px) {
-            flex-basis: calc((100% - 2 * 30px) / 2);
-        }
 }
