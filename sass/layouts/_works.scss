@@ -121,6 +121,7 @@
 .customers {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
     @media screen and (min-width: 480px) {

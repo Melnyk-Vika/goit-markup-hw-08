@@ -911,6 +911,7 @@ h6 {
 .customers {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
 }
