@@ -9,25 +9,15 @@ display: block;
 
 .image {
     display: flex;
-    flex-wrap: wrap;
     gap: 30px;
 }
 
 .image__title {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    @media screen and (min-width: 768px) {
-            display: flex;
-            flex-wrap: wrap;
-            margin-top: -30px;
-            margin-bottom: -30px;
-        }
+position: relative;
 }
 
 .image__link {
     position: relative;
-    width: 100%;
 }
 
 .image__text {
