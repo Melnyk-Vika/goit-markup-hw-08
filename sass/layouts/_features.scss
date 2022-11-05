@@ -2,11 +2,25 @@
 
 .feature-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
 }
 
 .feature-list__item {
-    flex-basis: calc((100% - 90px) / 4);
+    width: 100%;
+    @media screen and (min-width: 768px) {
+        flex-basis: calc((100% - 2 * 30px) / 2);
+         }
+    
+    @media screen and (min-width: 1200px) {
+             flex-basis: calc((100% - 90px) / 4);
+         }
+    
+    &:not(:last-child) {
+        @media screen and (max-width: 767px) {
+            margin-bottom: 30px;
+             }
+         }
 }
 
 .caption {

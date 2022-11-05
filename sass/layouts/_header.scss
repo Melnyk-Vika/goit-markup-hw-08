@@ -41,8 +41,8 @@
 }
 
 .site-nav {
-    display: flex;
-    margin-left: 93px;
+   position: absolute;
+   top: 100%
 }
 
 .site-nav__link {
@@ -129,4 +129,7 @@
     }
 }
 
+.page-header {
+    position: relative;
+}
 
