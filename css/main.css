@@ -198,17 +198,10 @@ h6 {
   border-radius: 50%;
   outline: none;
 }
-
-.menu-toggle:hover,
-.menu-toggle:focus {
+.menu-toggle:hover, .menu-toggle:focus {
   color: #2196F3;
 }
 
-@media (min-width: 768px) {
-  .menu-toggle {
-    display: none;
-  }
-}
 .menu-container .menu-toggle {
   position: absolute;
   top: 20px;
@@ -221,6 +214,11 @@ h6 {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+@media screen and (max-width: 767px) {
+  .mobile-menu {
+    display: none;
+  }
 }
 
 .mobile-menu__link {
@@ -235,16 +233,26 @@ h6 {
   text-decoration: underline;
 }
 
-@media (max-width: 767px) {
-  .mobile-menu {
-    display: none;
-  }
-}
 .menu {
   padding: 0;
   margin: 0;
   list-style: none;
   display: flex;
+}
+@media screen and (max-width: 767px) {
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    height: 393px;
+    text-align: center;
+  }
+}
+
+.menu.is-open {
+  display: block;
 }
 
 .menu__link {
@@ -258,11 +266,6 @@ h6 {
   text-decoration: underline;
 }
 
-@media (max-width: 599px) {
-  .menu {
-    display: none;
-  }
-}
 .menu-container {
   position: fixed;
   top: 0;
@@ -272,6 +275,17 @@ h6 {
   background-color: #fff;
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
+}
+@media screen and (max-width: 767px) {
+  .menu-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 393px;
+    text-align: center;
+  }
 }
 
 .menu-container.is-open {
@@ -283,13 +297,41 @@ h6 {
   height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/Imgi1.jpeg");
   background-position: center;
+}
+@media screen and (min-width: 480px) {
+  .picture {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/header/Headermobile.jpeg");
+  }
+}
+@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
+  .picture {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/header/Headermobile@2x.jpeg");
+  }
+}
+@media screen and (min-width: 768px) {
+  .picture {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/header/Headertablet.jpeg");
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .picture {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/header/Headertablet@2x.jpeg");
+  }
+}
+@media screen and (min-width: 1200px) {
+  .picture {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/Imgi1.jpeg");
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .picture {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/header/img2x.jpeg");
+  }
 }
 
 /* Logo */
 .logo {
-  margin-right: 93px;
   color: var(--logo-color);
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -307,11 +349,24 @@ h6 {
 .nav {
   display: flex;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 480px) {
+  .nav {
+    width: 480px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav {
+    position: relative;
+  }
 }
 
 .site-nav {
   display: flex;
-  margin-left: 93px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .site-nav__link {
@@ -412,11 +467,21 @@ h6 {
   margin-right: auto;
   color: var(--primary-white-color);
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+@media screen and (min-width: 480px) {
+  .hero-title {
+    font-size: 26px;
+    line-height: 1.62;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 /* ------backdrop------- */
@@ -429,6 +494,7 @@ h6 {
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 2;
+  overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
@@ -438,7 +504,6 @@ h6 {
 
 /* ---------------Modal------------------- */
 .modal {
-  position: absolute;
   padding: 40px;
   top: 50%;
   left: 50%;
@@ -449,6 +514,15 @@ h6 {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (max-width: 479px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 450px;
+  }
 }
 
 .modal__icon {
@@ -806,7 +880,6 @@ h6 {
 
 /* Work */
 .work-list {
-  display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;

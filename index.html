@@ -19,20 +19,20 @@
             <a href="./index.html" class="logo">
                <span class="accent">Web</span>Studio</a>
                <button type="button" class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-                <svg width="40" height="40" aria-label="перемикач мобільного меню">
-                    <use class="icon-menu" href="./img/menu.svg#icon-menu_40px"></use>
-                </svg>
+                <svg width="40" height="40" aria-label="перемикач мобільного меню"><use class="icon-menu" href="./img/menu.svg#icon-menu_40px"></use></svg>
                 </button>
                 <ul class="site-nav menu list">
                     <li class="site-nav__item menu__link"><a href="./index.html"class="site-nav__link site-nav__link--current">Студія</a></li>
                     <li class="site-nav__item menu__link"><a href="portfolio.html" class="site-nav__link">Портфоліо</a></li>
                     <li class="site-nav__item menu__link"><a href="" class="site-nav__link">Контакти</a></li>
                 </ul>
+                <ul class="auth-nav list">
+                    <li class="auth-nav__item"><a href="mailto:info@devstudio.com" class="auth-nav__link"><svg class="conect-icon" width="16" height="12"><use href="./img/icons.svg#icon-email"></use></svg>info@devstudio.com</a></li>
+                    <li class="auth-nav__item"><a href="tel:+380961111111" class="auth-nav__link"><svg class="conect-icon" width="10" height="16"><use href="./img/icons.svg#icon-smartphone"></use></svg>+38 096 111 11 11</a></li>
+                </ul>
                 <div class="menu-container js-menu-container" id="mobile-menu">
                 <button type="button" class="menu-toggle js-close-menu">
-                    <svg width="40" height="40" aria-label="перемикач мобільного меню">
-                        <use class="icon-cross" href="./img/close1.svg#icon-close-black-18dp-2-1"></use>
-                    </svg>
+                    <svg width="40" height="40" aria-label="перемикач мобільного меню"><use class="icon-cross" href="./img/close1.svg#icon-close-black-18dp-2-1"></use></svg>
                 </button>
                 <ul class="site-nav mobile-menu list">
                     <li class="site-nav__item mobile-menu__link"><a href="./index.html" class="site-nav__link site-nav__link--current">Студія</a></li>
@@ -40,14 +40,8 @@
                     <li class="site-nav__item mobile-menu__link"><a href="" class="site-nav__link">Контакти</a></li>
                 </ul>
                 <ul class="auth-nav list">
-                    <li class="auth-nav__item"><a href="mailto:info@devstudio.com" class="auth-nav__link"><svg class="conect-icon"
-                                width="16" height="12">
-                                <use href="./img/icons.svg#icon-email"></use>
-                            </svg>info@devstudio.com</a></li>
-                    <li class="auth-nav__item"><a href="tel:+380961111111" class="auth-nav__link"><svg class="conect-icon" width="10"
-                                height="16">
-                                <use href="./img/icons.svg#icon-smartphone"></use>
-                            </svg>+38 096 111 11 11</a></li>
+                    <li class="auth-nav__item"><a href="mailto:info@devstudio.com" class="auth-nav__link"><svg class="conect-icon" width="16" height="12"><use href="./img/icons.svg#icon-email"></use></svg>info@devstudio.com</a></li>
+                    <li class="auth-nav__item"><a href="tel:+380961111111" class="auth-nav__link"><svg class="conect-icon" width="10" height="16"><use href="./img/icons.svg#icon-smartphone"></use></svg>+38 096 111 11 11</a></li>
                 </ul>
                 </div>
         </nav> 
@@ -143,14 +137,35 @@
          <ul class="image__title list">
             <div class="image">
                 <li class="image__link">
+                    <picture>
+                        <source media="(min-width:1200px)" srcset="./img/2x/box1.jpg 1x, ./img/2x/box1@2x.jpg 2x" />
+                        <source media="(max-width:767px)" srcset="./img/2x/box1.jpg 1x, ./img/2x/box1@2x.jpg 2x" />
+                        <source media="(min-width:768px)" srcset="./img/2x/box1.jpg 1x, ./img/2x/box1@2x.jpg 2x" />
+                        <source media="(max-width:479px)" srcset="./img/2x/box1.jpg 1x, ./img/2x/box1@2x.jpg 2x" />
+                        <source media="(min-width:480px)" srcset="./img/2x/box1.jpg 1x, ./img/2x/box1@2x.jpg 2x" />
+                    </picture>
                         <img src="img/box1.jpg" alt="фото розмітки" width="370">
                         <p class="image__text">десктопні додатки</p>
                </li>
                 <li class="image__link">
+                    <picture>
+                        <source media="(min-width:1200px)" srcset="./img/2x/img4.jpg 1x, ./img/2x/img@2x4.jpg 2x" />
+                        <source media="(max-width:767px)" srcset="./img/2x/img4.jpg 1x, ./img/2x/img@2x4.jpg 2x" />
+                        <source media="(min-width:768px)" srcset="./img/2x/img4.jpg 1x, ./img/2x/img@2x4.jpg 2x" />
+                        <source media="(max-width:479px)" srcset="./img/2x/img4.jpg 1x, ./img/2x/img@2x4.jpg 2x" />
+                        <source media="(min-width:480px)" srcset="./img/2x/img4.jpg 1x, ./img/2x/img@2x4.jpg 2x" />
+                    </picture>
                         <img src="img/box2.jpg" alt="мобільний додаток" width="370">
                         <p class="image__text">мобільні додатки</p>
                 </li>
                 <li class="image__link">
+                    <picture>
+                        <source media="(min-width:1200px)" srcset="./img/2x/img5.jpg 1x, ./img/2x/img@2x5.jpg 2x" />
+                        <source media="(max-width:767px)" srcset="./img/2x/img5.jpg 1x, ./img/2x/img@2x5.jpg 2x" />
+                        <source media="(min-width:768px)" srcset="./img/2x/img5.jpg 1x, ./img/2x/img@2x5.jpg 2x" />
+                        <source media="(max-width:479px)" srcset="./img/2x/img5.jpg 1x, ./img/2x/img@2x5.jpg 2x" />
+                        <source media="(min-width:480px)" srcset="./img/2x/img5.jpg 1x, ./img/2x/img@2x5.jpg 2x" />
+                    </picture>
                         <img src="img/box3.jpg" alt="графіка" width="370">
                         <p class="image__text">дизайнерські рішення</p>
                 </li>
@@ -266,7 +281,7 @@
          </section>
   </main>
   <!--site footer-->
-    <footer class="footer">
+    <!-- <footer class="footer">
         <div class="container footer-container">
             <div class="contacts">
                 <a href="./index.html" class="logofooter footer__logo--color logo"><span class="logo__accent">Web</span>Studio</a>
@@ -304,7 +319,7 @@
                 </form>
             </div>  
     </div>
-  </footer>
+  </footer> -->
   <script src="./js/modal.js"></script>
   <script src="./js/mobile-menu.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
