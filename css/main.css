@@ -89,15 +89,6 @@ h6 {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .page-header .container-menu {
-    min-height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }
-}
-
 /* Button */
 .button {
   border: none;
@@ -193,8 +184,8 @@ h6 {
 }
 
 .menu-toggle {
-  min-height: 40px;
-  min-width: 40px;
+  height: 40px;
+  width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -202,8 +193,8 @@ h6 {
   padding: 0;
   background-color: transparent;
   cursor: pointer;
+  color: #212121;
   border: none;
-  border-radius: 50%;
   outline: none;
 }
 .menu-toggle:hover, .menu-toggle:focus {
@@ -279,6 +270,7 @@ h6 {
 }
 
 .menu-container {
+  display: block;
   position: fixed;
   top: 0;
   left: 0;
@@ -288,9 +280,15 @@ h6 {
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   .menu-container {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 393px;
+    text-align: center;
   }
 }
 
@@ -305,10 +303,37 @@ h6 {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  letter-spacing: 0.03em;
   text-decoration: none;
+  align-items: center;
+  text-align: center;
 }
 
+.navigation__logo {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  margin-right: 93px;
+}
+
+@media screen and (min-width: 480px) {
+  .navigation__logo {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navigation__logo {
+    padding-top: 26px;
+    padding-bottom: 16px;
+    margin-right: 87px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .navigation__logo {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
+  }
+}
 .accent {
   color: var(--akcent-color);
 }
@@ -317,18 +342,6 @@ h6 {
 .nav {
   display: flex;
   align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-@media screen and (min-width: 480px) {
-  .nav {
-    width: 480px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .nav {
-    position: relative;
-  }
 }
 
 .site-nav {
@@ -407,10 +420,8 @@ h6 {
   margin-left: 50px;
 }
 
-@media screen and (min-width: 768px) {
-  .mob-soc {
-    display: none;
-  }
+.mob-soc__link {
+  text-decoration: none;
 }
 
 .auth-nav__link {
