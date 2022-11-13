@@ -212,14 +212,14 @@
     &:focus {
             color: var(--akcent-color);
         }
-     @media screen and (max-width: 767px) {
+     @media screen and (min-width: 768px) {
             display: none;
         }    
 }
 
 .site-nav__link--current {
     color: var(--akcent-color);
-     @media screen and (max-width: 767px) {
+     @media screen and (min-width: 768px) {
             display: none;
         }
 }
@@ -252,9 +252,7 @@
 .auth-nav {
     display: flex;
     margin-left: auto;
-    @media screen and (max-width: 767px) {
-            display: none;
-        }
+   
 }
 
 .auth-nav__item+.auth-nav__item {
@@ -262,7 +260,7 @@
 }
 
 .mob-soc {
-    @media screen and (max-width: 767px) {
+    @media screen and (min-width: 768px) {
             display: none;
         }
 }

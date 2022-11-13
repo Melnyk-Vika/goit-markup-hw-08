@@ -397,7 +397,7 @@ h6 {
 .site-nav__link:hover, .site-nav__link:focus {
   color: var(--akcent-color);
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   .site-nav__link {
     display: none;
   }
@@ -406,7 +406,7 @@ h6 {
 .site-nav__link--current {
   color: var(--akcent-color);
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   .site-nav__link--current {
     display: none;
   }
@@ -441,17 +441,12 @@ h6 {
   display: flex;
   margin-left: auto;
 }
-@media screen and (max-width: 767px) {
-  .auth-nav {
-    display: none;
-  }
-}
 
 .auth-nav__item + .auth-nav__item {
   margin-left: 50px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   .mob-soc {
     display: none;
   }
