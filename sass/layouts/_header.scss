@@ -23,6 +23,9 @@
     &:focus {
          color: #2196F3;
        }
+    @media (min-width: 768px) {
+        display: none;
+    }   
 }
 
 .menu-container .menu-toggle {
@@ -32,14 +35,20 @@
     color: #fff;
 }
 
+.container-menu {
+  min-width: 320px;
+  max-width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .mobile-menu {
-    display: flex;
     padding: 0;
     margin: 0;
     list-style: none;
-    @media screen and (max-width: 767px) {
-                display: none;
-        }
+    }        
 
 .mobile-menu__link {
     display: block;
@@ -259,11 +268,14 @@
 }
 
 .conect-icon {
-    margin-right: 10px;
+    margin-right: 10px; 
     fill: currentColor;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &:hover,
     &:focus {
             color: var(--akcent-color);
         }
-    }
+ }
+
+
+ 
