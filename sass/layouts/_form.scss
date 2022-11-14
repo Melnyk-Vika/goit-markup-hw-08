@@ -117,7 +117,7 @@
     @media screen and (min-width: 1200px) {
         font-size: 14px;
         line-height: 1.71;
-}
+   }
 }
 
 .policy-text-main span {
@@ -139,18 +139,6 @@
     fill: var(--white-background-color);
 }
 
-
-
-// .checkbox {
-//     visibility: hidden;
-//     width: 1px;
-//     height: 1px;
-//     margin: -1px;
-//     &:focus {
-//             border-color: var(--akcent-color);
-//         }
-// }
-
 .checkbox-text {
     display: flex;
     justify-content: center;
@@ -165,10 +153,6 @@
     color: var(--title-text-collor);
 }
 
-// .check {
-//     padding-left: 10px;
-// }
-
 .form-comment {
     margin: 0;
     padding: 12px 16px;
@@ -178,6 +162,20 @@
     border-radius: 4px;
     outline: transparent;
 }
+
+// .checkbox {
+//     visibility: hidden;
+//     width: 1px;
+//     height: 1px;
+//     margin: -1px;
+//     &:focus {
+//             border-color: var(--akcent-color);
+//         }
+// }
+
+// .check {
+//     padding-left: 10px;
+// }
 
 // .icon-checkbox {
 //     width: 16px;
