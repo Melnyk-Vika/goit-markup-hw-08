@@ -11,7 +11,7 @@
  <link rel="stylesheet" href="./css/main.min.css">
     <title>WebStudio</title>
 </head>
-<body>
+<body class="modal-open" >
   <!--site header-->
   <header class="page-header">
      <div class="container main-nav">
@@ -24,46 +24,43 @@
                     <li class="site-nav__item"><a href="" class="site-nav__link">Контакти</a></li>
                 </ul>
         </nav> 
-        <ul class="auth-nav list">
+        <ul class="auth-nav nav-header list">
                     <li class="auth-nav__item"><a href="mailto:info@devstudio.com" class="auth-nav__link"><svg class="conect-icon" width="16" height="12"><use href="./img/icons.svg#icon-email"></use></svg>info@devstudio.com</a></li>
                     <li class="auth-nav__item"><a href="tel:+380961111111" class="auth-nav__link"><svg class="conect-icon" width="10" height="16"><use href="./img/icons.svg#icon-smartphone"></use></svg>+38 096 111 11 11</a></li>
                 </ul>
-        <button type="button" class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-            <svg width="40" height="40" aria-label="перемикач мобільного меню">
+        <button type="button" class="menu-open-btn" data-menu-open>
+            <svg class="menu-btn" width="40" height="40">
                 <use class="icon-menu" href="./img/menu.svg#icon-menu_40px"></use>
             </svg>
         </button>
-        <div class="menu-container js-menu-container" id="mobile-menu">
-            <button type="button" class="menu-toggle js-close-menu">
-                <svg width="40" height="40" aria-label="перемикач мобільного меню">
+        <div class="mob-menu flex is-hidden" data-menu>
+            <div class="menu-container"></div>
+            <div class="mob-menu__top">
+                  <button type="button" class="menu-close-btn" data-menu-close>
+                <svg class="menu-close-btn" width="40" height="40">
                     <use class="icon-cross" href="./img/close1.svg#icon-close-black-18dp-2-1"></use>
                 </svg>
             </button>
-            <ul class="site-nav mobile-menu list">
-                <li class="site-nav__item mobile-menu__link"><a href="./index.html" class="site-nav__link site-nav__link--current">Студія</a></li>
-                <li class="site-nav__item mobile-menu__link"><a href="portfolio.html" class="site-nav__link">Портфоліо</a></li>
-                <li class="site-nav__item mobile-menu__link"><a href="" class="site-nav__link">Контакти</a></li>
+            <ul class="mob-menu-list list">
+                <li class="mob-menu-list__item"><a href="./index.html" class="mob-menu-list__link link mob-menu-list__link--current">Студія</a></li>
+                <li class="mob-menu-list__item"><a href="portfolio.html" class="mob-menu-list__link link">Портфоліо</a></li>
+                <li class="mob-menu-list__item"><a href="" class="mob-menu-list__link link">Контакти</a></li>
             </ul>
-            <ul class="auth-nav list">
-                <li class="auth-nav__item"><a href="mailto:info@devstudio.com" class="auth-nav__link"><svg class="conect-icon"
-                            width="16" height="12">
-                            <use href="./img/icons.svg#icon-email"></use>
-                        </svg>info@devstudio.com</a></li>
-                <li class="auth-nav__item"><a href="tel:+380961111111" class="auth-nav__link"><svg class="conect-icon"
-                            width="10" height="16">
-                            <use href="./img/icons.svg#icon-smartphone"></use>
-                        </svg>+38 096 111 11 11</a></li>
-            </ul>
-            <ul class="mob-soc list">
-                <li class="mob-soc__item"><a class="mob-soc__link link" href="" target="_blank"
-                        rel="noopener noreferrer nofollow">Instagram</a></li>
-                <li class="mob-soc__item"><a class="mob-soc__link link" href="" target="_blank"
-                        rel="noopener noreferrer nofollow">Twitter</a></li>
-                <li class="mob-soc__item"><a class="mob-soc__link link" href="" target="_blank"
-                        rel="noopener noreferrer nofollow">Facebook</a></li>
-                <li class="mob-soc__item"><a class="mob-soc__link link" href="" target="_blank"
-                        rel="noopener noreferrer nofollow">LinkedIn</a></li>
-            </ul>
+            </div>
+            <div class="mob-menu-list__bottom">
+                <a href="tel:+380961111111" class="mob-menu-list__tell link"><svg class="conect-icon" width="10" height="16">
+                        <use href="./img/icons.svg#icon-smartphone"></use>
+                    </svg>+38 096 111 11 11</a>
+               <a href="mailto:info@devstudio.com" class="mob-menu-list__mail link"><svg class="conect-icon" width="16" height="12">
+                        <use href="./img/icons.svg#icon-email"></use>
+                    </svg>info@devstudio.com</a>
+                <ul class="mob-menu-list__social list">
+                    <li class="mob-menu-list__social-item">Instagram</li>
+                    <li class="mob-menu-list__social-item">Twitter</li>
+                    <li class="mob-menu-list__social-item">Facebook</li>
+                    <li class="mob-menu-list__social-item">LinkedIn</li>
+                </ul>
+            </div>
         </div>
      </div>
   </header> 
@@ -74,7 +71,8 @@
             <div class="container">
              <h1 class="hero-title">ефективні рішення для вашого бізнесу</h1>
              <button data-modal-open type="button" class="button">Замовити послугу</button>
-            <div class="backdrop is-hidden" data-modal><div class="modal">
+            <div class="backdrop is-hidden" data-modal>
+                <div class="modal">
                 <form class="form">
                     <p class="modal__text">Залиште свої дані, ми вам передзвонимо</p>
                         <label class="form-field" for="name">
@@ -351,9 +349,6 @@
     </div>
   </footer>
   <script src="./js/modal.js"></script>
-  <script src="./js/mobile-menu.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
-    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
-    crossorigin="anonymous"></script>
+  <script src="./js/menu.js"></script>
 </body>
 </html>
