@@ -66,6 +66,10 @@
     color: var(--akcent-color);
 }
 
+.address {
+    list-style: none;
+} 
+
 .address__link {
     color: var(--adress-link-color);
     font-weight: 400;
@@ -131,12 +135,11 @@
     gap: 10px;
 }
 
-// .footer-icon__item {
-//     display: flex;
-//     width: 44px;
-//     height: 44px;
-
-// }
+.footer-icon__item {
+    display: flex;
+    width: 44px;
+    height: 44px;
+}
 
 .footer-icon__link {
     display: flex;

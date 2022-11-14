@@ -1267,6 +1267,10 @@ h6 {
   color: var(--akcent-color);
 }
 
+.address {
+  list-style: none;
+}
+
 .address__link {
   color: var(--adress-link-color);
   font-weight: 400;
@@ -1332,6 +1336,12 @@ h6 {
   display: flex;
   justify-content: center;
   gap: 10px;
+}
+
+.footer-icon__item {
+  display: flex;
+  width: 44px;
+  height: 44px;
 }
 
 .footer-icon__link {
