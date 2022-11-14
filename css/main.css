@@ -691,9 +691,7 @@ h6 {
 
 /* ----------Form------------------- */
 .form {
-  width: 448px;
-  margin-left: auto;
-  margin-right: auto;
+  display: block;
 }
 
 .form-field {
@@ -705,13 +703,11 @@ h6 {
 
 .form-input {
   width: 100%;
-  margin: 0;
   padding: 11px;
   padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   text-align: left;
-  cursor: pointer;
   font: inherit;
   color: var(--primary-text-color);
   outline: transparent;
@@ -719,6 +715,7 @@ h6 {
 }
 .form-input:focus {
   border-color: var(--akcent-color);
+  cursor: pointer;
 }
 
 .form-comment {
@@ -770,14 +767,16 @@ h6 {
 
 .policy-link {
   color: var(--akcent-color);
-  margin-left: 4px;
+  margin-left: 3px;
   font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  /* identical to box height, or 171% */
-  letter-spacing: 0.03em;
+  text-decoration: underline;
+}
+@media screen and (max-width: 479px) {
+  .policy-link {
+    position: absolute;
+    top: 18px;
+    left: 21px;
+  }
 }
 
 .forms-icon {
@@ -795,14 +794,55 @@ h6 {
   fill: var(--akcent-color);
 }
 
-.checkbox {
-  visibility: hidden;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
+.modal-input-policy {
+  padding-left: 0px;
+  margin-top: 25px;
+  margin-bottom: 30px;
 }
-.checkbox:focus {
-  border-color: var(--akcent-color);
+@media screen and (min-width: 1200px) {
+  .modal-input-policy {
+    padding-left: 14px;
+  }
+}
+
+.policy-text-main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  line-height: 1.14;
+  color: var(--secondary-text-color);
+}
+@media screen and (max-width: 479px) {
+  .policy-text-main {
+    font-size: 10px;
+    line-height: 1.11;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .policy-text-main {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+
+.policy-text-main span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 15px;
+  margin-right: 5px;
+  border: 2px solid #212121;
+  border-radius: 3px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: transparent;
+}
+
+.policy-input:checked + .policy-text-main span {
+  background-color: var(--accent-color);
+  border-color: transparent;
+  fill: var(--white-background-color);
 }
 
 .checkbox-text {
@@ -819,10 +859,6 @@ h6 {
   color: var(--title-text-collor);
 }
 
-.check {
-  padding-left: 10px;
-}
-
 .form-comment {
   margin: 0;
   padding: 12px 16px;
@@ -831,36 +867,6 @@ h6 {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: transparent;
-}
-
-.icon-checkbox {
-  width: 16px;
-  height: 15px;
-  margin-right: 8px;
-  overflow: hidden;
-  border-radius: 0.05em;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  box-shadow: 0 0 0 0.1em var(--primary-text-color);
-}
-.checkbox:focus + .icon-checkbox {
-  box-shadow: 0 0 0 0.1em var(--akcent-color);
-  background-position: 100%;
-}
-.checkbox:checked + .icon-checkbox {
-  box-shadow: 0 0 0 0.1em var(--akcent-color);
-  background-image: url("../img/icon-check.svg");
-  background-position: 100%;
-}
-
-.checkbox-label {
-  display: flex;
-  cursor: pointer;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  margin-bottom: 26px;
-  margin-top: 20px;
 }
 
 /* ------Visually------ */
