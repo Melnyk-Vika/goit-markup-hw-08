@@ -319,13 +319,13 @@ h6 {
 
 .mob-menu-list__mail {
   display: block;
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 1.17;
   letter-spacing: 0.02em;
-  color: var(--primary-text-color);
+  color: var(--title-text-collor);
   margin-bottom: 64px;
   text-decoration: none;
 }
