@@ -473,8 +473,6 @@ h6 {
     margin-left: auto;
     flex-direction: column;
     align-content: center;
-    margin-top: 21px;
-    margin-bottom: 21px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -556,6 +554,7 @@ h6 {
   .hero-title {
     font-size: 44px;
     line-height: 1.36;
+    max-width: 696px;
   }
 }
 
@@ -1063,6 +1062,11 @@ h6 {
     width: 354px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .work-list__item {
+    width: 270px;
+  }
+}
 
 .team__title {
   margin-bottom: 30px;
@@ -1445,11 +1449,6 @@ h6 {
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--primary-white-color);
-}
-@media screen and (min-width: 768px) {
-  .join-title {
-    padding-bottom: 10px;
-  }
 }
 @media screen and (min-width: 1200px) {
   .join-title {
