@@ -508,7 +508,6 @@ h6 {
 }
 @media screen and (min-width: 768px) {
   .auth-nav__link {
-    margin-top: 10px;
     align-items: center;
   }
 }
@@ -594,7 +593,8 @@ h6 {
 }
 @media screen and (min-width: 1200px) {
   .picture {
-    max-width: 1200px;
+    max-width: 1600px;
+    padding: 200px 0;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/Imgi1.jpeg");
   }
 }
